@@ -1,0 +1,19 @@
+<configuration>
+
+    <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <pattern>%d{yyyy-MM-dd HH:mm:ss} %highlight([%level]) %cyan(%logger{36}) - %msg%n</pattern>
+        </encoder>
+    </appender>
+
+    <logger name="com.tuapp" level="info"/>
+
+    <logger name="org.springframework" level="warn"/>
+    <logger name="org.hibernate" level="error"/>
+    <logger name="com.zaxxer.hikari" level="error"/>
+
+    <root level="info">
+        <appender-ref ref="STDOUT" />
+    </root>
+
+</configuration>
